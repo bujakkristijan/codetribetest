@@ -28,15 +28,15 @@ const FirstContainerInput = (props) => {
                 <form className='form-container'> 
                     <div className='item-container'>
                         <label className='item-label'>Name: </label>
-                        <input type='text' onChange={(e) => setName(e.target.value)}></input>
+                        <input className='form-control' type='text' onChange={(e) => setName(e.target.value)}></input>
                     </div>
                     <div className='item-container'>
                         <label className='item-label'>Quantity: </label>
-                        <input type='number'  onChange={(e) => setQuantity(e.target.value)}></input>
+                        <input className='form-control' type='number'  onChange={(e) => setQuantity(e.target.value)}></input>
                     </div>
                     <div className='item-container'>
                         <label className='item-label'>Price: </label>
-                        <input type='number'  onChange={(e) => setPrice(e.target.value)}></input>
+                        <input className='form-control' type='number'  onChange={(e) => setPrice(e.target.value)}></input>
                     </div>
                     <button className='btn btn-success' type='submit' onClick={onSubmit}>
                         Submit
