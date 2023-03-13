@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import './FirstContainerInput.css';
 
 const FirstContainerInput = (props) => {
+    
     const add = props.add;
     const [name, setName] = useState('');
     const [quantity, setQuantity] = useState(1);
@@ -17,12 +18,10 @@ const FirstContainerInput = (props) => {
         else{
             add(item);
             alert("Item successfully added!")
-        }
-        
+        }    
     }
 
   return (
-    
             <div className='main-container'>
                 <h1 className='text-center'>Create item</h1>
                 <form className='form-container'> 
@@ -43,17 +42,7 @@ const FirstContainerInput = (props) => {
                     </button>
                 </form>
             </div>
-        
-
-
-
-
-    
-
-
-
-
-  )
+        )
 }
 
 export default FirstContainerInput

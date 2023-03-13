@@ -24,8 +24,6 @@ function App() {
   const addItemToList = (item) => {
     setGroceryList([...groceryList, item])
   }
-
-
   
   return (
     <div className="App">
