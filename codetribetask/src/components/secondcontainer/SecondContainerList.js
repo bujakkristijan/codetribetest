@@ -6,21 +6,11 @@ const SecondContainerList = (props) => {
     const groceryList = props.list;
     const setGroceryList = props.setGroceryList;
 
-    useEffect(() => {
-      console.log("render");
-    
-      
-    }, [groceryList])
-    
-
     const handleEdit = (item, itemIndex) =>{
-        // console.log(item);
         setGroceryList(groceryList.map((i, index) => itemIndex === index ? item : i));
     }
     const handleDelete = (item) =>{
-        console.log("Item from delete" + item);
         setGroceryList(groceryList.filter((deleteItem) => deleteItem.name !== item.name ));
-
     }
   
   return (
@@ -40,7 +30,7 @@ const SecondContainerList = (props) => {
                 <tbody>
                     {groceryList.map(
                         (item, index) =>  
-                         <SecondContainerItem key={index} item={item} groceryList={groceryList} index={index} handleEdit={handleEdit} handleDelete={handleDelete} />
+                         <SecondContainerItem key={index} item={item} index={index} handleEdit={handleEdit} handleDelete={handleDelete} />
                     )}
                 </tbody>
             </table>

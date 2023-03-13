@@ -7,11 +7,10 @@ const FirstContainerInput = (props) => {
     const [name, setName] = useState('');
     const [quantity, setQuantity] = useState(1);
     const [price, setPrice] = useState(1);
-    let isClickedEdit = false;
 
     const onSubmit = (e) => {
         e.preventDefault();
-        const item = {name, quantity, price, isClickedEdit, setName, setPrice, setQuantity};
+        const item = {name, quantity, price};
         if(item.name === "" || item.quantity<1 || item.price<1){
             alert("Eror! Please insert valid values!");
         }

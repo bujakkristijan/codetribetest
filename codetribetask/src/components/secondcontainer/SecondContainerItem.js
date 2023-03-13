@@ -7,26 +7,25 @@ const SecondContainerItem = (props) => {
     const handleDelete = props.handleDelete
     const handleEdit = props.handleEdit
     const [isEditClicked, setIsEditClicked] = useState(false);
-     const [name, setName] = useState(item.name || '');
-     const [quantity, setQuantity] = useState(item.quantity || 1);
-     const [price, setPrice] = useState(item.price || 1);
-    //  console.log("ITEEEEM" + JSON.stringify(item));
+    const [name, setName] = useState(item.name || '');
+    const [quantity, setQuantity] = useState(item.quantity || 1);
+    const [price, setPrice] = useState(item.price || 1);
 
      const inputOrLabel = (item)=>{
         if(isEditClicked === true){
             return <>
                 <td className='td-content'>
-                    <input type='text' readOnly={!isEditClicked}
+                    <input type='text'
                         defaultValue={item.name} onChange={(e) => setName(e.target.value)}>
                     </input>
                 </td>
                 <td className='td-content'>
-                    <input type='number' readOnly={!isEditClicked}
+                    <input type='number'
                         defaultValue={item.quantity} onChange={(e) => setQuantity(e.target.value)}>
                     </input>
                 </td>
                 <td className='td-content'>
-                    <input type='number' readOnly={!isEditClicked}
+                    <input type='number'
                         defaultValue={item.price} onChange={(e) => setPrice(e.target.value)}>
                     </input>
                 </td>
@@ -37,8 +36,6 @@ const SecondContainerItem = (props) => {
         }
      }
 
-    const groceryList = props.groceryList;
-    console.log("GROCERYYYYY LIIIISTTT " + JSON.stringify(groceryList));
   return (
         <tr>
             {inputOrLabel(item)}
