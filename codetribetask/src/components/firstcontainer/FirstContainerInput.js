@@ -1,37 +1,51 @@
 import React, {useState} from 'react'
+import './FirstContainerInput.css';
 
 const FirstContainerInput = (props) => {
     const add = props.add;
     const [name, setName] = useState('');
     const [quantity, setQuantity] = useState(1);
     const [price, setPrice] = useState(1);
+    let isClickedEdit = false;
 
     const onSubmit = (e) => {
         e.preventDefault();
-        const item = {name, quantity, price};
+        const item = {name, quantity, price, isClickedEdit, setName, setPrice, setQuantity};
         add(item);
     }
 
   return (
-    <div>
-        <form className='form-container'>
-            <div className='item-container'>
-                <label>Name: </label>
-                <input type='text' onChange={(e) => setName(e.target.value)}></input>
+    
+            <div className='main-container'>
+                <h1 className='text-center'>Create item</h1>
+                <form className='form-container'> 
+                    <div className='item-container'>
+                        <label className='item-label'>Name: </label>
+                        <input type='text' onChange={(e) => setName(e.target.value)}></input>
+                    </div>
+                    <div className='item-container'>
+                        <label className='item-label'>Quantity: </label>
+                        <input type='number'  onChange={(e) => setQuantity(e.target.value)}></input>
+                    </div>
+                    <div className='item-container'>
+                        <label className='item-label'>Price: </label>
+                        <input type='number'  onChange={(e) => setPrice(e.target.value)}></input>
+                    </div>
+                    <button className='btn btn-success' type='submit' onClick={onSubmit}>
+                        Submit
+                    </button>
+                </form>
             </div>
-            <div className='item-container'>
-                <label>Quantity: </label>
-                <input type='number'  onChange={(e) => setQuantity(e.target.value)}></input>
-            </div>
-            <div className='item-container'>
-                <label>Price: </label>
-                <input type='number'  onChange={(e) => setPrice(e.target.value)}></input>
-            </div>
-            <button type='submit' onClick={onSubmit}>
-                Submit
-            </button>
-        </form>
-    </div>
+        
+
+
+
+
+    
+
+
+
+
   )
 }
 
