@@ -31,7 +31,7 @@ function App() {
     <div className="App">
       <FirstContainerInput add={addItemToList}/>
       <SecondContainerList list={groceryList} setGroceryList={setGroceryList}/>
-      <button className='btn btn-danger' onClick={() => setGroceryList([])}>Clear all</button>
+      {groceryList.length!==0 && <button className='btn btn-danger' onClick={() => setGroceryList([])}>Clear all</button>}
     </div>
   );
 }

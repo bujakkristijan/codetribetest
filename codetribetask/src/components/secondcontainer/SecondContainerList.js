@@ -111,8 +111,9 @@ const SecondContainerList = (props) => {
   return (
     <div>
         <div className='list-items-container'>
-        <h1 className='text-center'>List items</h1>
-        <table id="table" className='table table-hover'>
+        {groceryList.length ===0 && <h1 className='text-center'>List is empty</h1>}
+        {groceryList.length !==0 && <h1 className='text-center'>List items</h1>}
+        {groceryList.length !==0 && <table id="table" className='table table-hover'> 
                 <thead className='thead-name'>
                     <tr>
                         <th className='theadth'>Name</th>
@@ -146,6 +147,7 @@ const SecondContainerList = (props) => {
                     )}
                 </tbody>
             </table>
+                }   
         </div>
     </div>
   )

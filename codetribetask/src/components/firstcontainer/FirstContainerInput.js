@@ -11,7 +11,14 @@ const FirstContainerInput = (props) => {
     const onSubmit = (e) => {
         e.preventDefault();
         const item = {name, quantity, price, isClickedEdit, setName, setPrice, setQuantity};
-        add(item);
+        if(item.name === "" || item.quantity<1 || item.price<1){
+            alert("Eror! Please insert valid values!");
+        }
+        else{
+            add(item);
+            alert("Item successfully added!")
+        }
+        
     }
 
   return (
