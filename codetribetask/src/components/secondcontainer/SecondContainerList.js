@@ -9,8 +9,8 @@ const SecondContainerList = (props) => {
     const handleEdit = (item, itemIndex) =>{
         setGroceryList(groceryList.map((i, index) => itemIndex === index ? item : i));
     }
-    const handleDelete = (item) =>{
-        setGroceryList(groceryList.filter((deleteItem) => deleteItem.name !== item.name ));
+    const handleDelete = (index) =>{
+        setGroceryList(groceryList.filter((item, i) => i !== index));
     }
   
   return (

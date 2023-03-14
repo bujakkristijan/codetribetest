@@ -16,7 +16,7 @@ const SecondContainerItem = (props) => {
     //salje {name, quantity, price}
 
      const inputOrLabel = (item)=>{
-        
+
         if(isEditClicked === true){
             return <>
                 <td className='td-content'>
@@ -49,7 +49,7 @@ const SecondContainerItem = (props) => {
                     if(isEditClicked) handleEdit({name, quantity, price},index)
                     setIsEditClicked(!isEditClicked)
                     }}>{isEditClicked? 'Save' : "Edit"}</button>
-                <button className='btn btn-danger' onClick={() => handleDelete(item,index)}
+                <button className='btn btn-danger' onClick={() => handleDelete(index)}
                     style={{ marginLeft: "5px" }}>Delete</button>
             </td>
         </tr>
