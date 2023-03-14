@@ -30,11 +30,12 @@ const SecondContainerList = (props) => {
                 <tbody>
                     {groceryList.map(
                         (item, index) =>  
-                         <SecondContainerItem key={index} item={item} index={index} handleEdit={handleEdit} handleDelete={handleDelete} />
-                    )}
+                        <SecondContainerItem key={index} item={item} index={index} handleEdit={handleEdit} handleDelete={handleDelete}/>
+                        )
+                    }
                 </tbody>
             </table>
-                }   
+        }   
         </div>
     </div>
   )

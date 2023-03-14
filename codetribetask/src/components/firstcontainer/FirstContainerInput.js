@@ -17,6 +17,9 @@ const FirstContainerInput = (props) => {
         else{
             add(item);
             alert("Item successfully added!")
+            setName("");
+            setQuantity(1);
+            setPrice(1);
         }    
     }
 
@@ -26,15 +29,15 @@ const FirstContainerInput = (props) => {
                 <form className='form-container'> 
                     <div className='item-container'>
                         <label className='item-label'>Name: </label>
-                        <input className='form-control' type='text' onChange={(e) => setName(e.target.value)}></input>
+                        <input value={name} className='form-control' type='text' onChange={(e) => setName(e.target.value)}></input>
                     </div>
                     <div className='item-container'>
                         <label className='item-label'>Quantity: </label>
-                        <input className='form-control' type='number'  onChange={(e) => setQuantity(e.target.value)}></input>
+                        <input value={quantity} className='form-control' type='number'  onChange={(e) => setQuantity(e.target.value)}></input>
                     </div>
                     <div className='item-container'>
                         <label className='item-label'>Price: </label>
-                        <input className='form-control' type='number'  onChange={(e) => setPrice(e.target.value)}></input>
+                        <input value={price} className='form-control' type='number'  onChange={(e) => setPrice(e.target.value)}></input>
                     </div>
                     <button className='btn btn-success' type='submit' onClick={onSubmit}>
                         Submit

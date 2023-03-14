@@ -18,7 +18,6 @@ function App() {
 
   useEffect(() => {
     localStorage.setItem('groceryList',JSON.stringify(groceryList))
-    console.log("APP: ",groceryList)
   }, [groceryList])
   
   const addItemToList = (item) => {

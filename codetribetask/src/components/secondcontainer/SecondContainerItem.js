@@ -11,7 +11,12 @@ const SecondContainerItem = (props) => {
     const [quantity, setQuantity] = useState(item.quantity || 1);
     const [price, setPrice] = useState(item.price || 1);
 
+    //defaultValue se popuni sa vrednostima iz item-a sto je prosledjen kroz props, 
+    //a prilikom unosa novih vrednosti setuje se novi state za svaki posebno, pa se kao objekat u handleEdit funkciji
+    //salje {name, quantity, price}
+
      const inputOrLabel = (item)=>{
+        
         if(isEditClicked === true){
             return <>
                 <td className='td-content'>
