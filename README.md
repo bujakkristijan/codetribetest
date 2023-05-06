@@ -51,3 +51,5 @@ If the result is less than 0, display a message indicating the amount that the u
 ![codetribe3](https://user-images.githubusercontent.com/76042091/236645298-edd9fe58-9d9c-49eb-b044-ac1f3a460c55.jpg)
 
 ![codetribe5](https://user-images.githubusercontent.com/76042091/236645295-6ffa8323-dab0-4965-aa00-a80f3e90c4b9.jpg)
+
+![codetribe6](https://user-images.githubusercontent.com/76042091/236645725-3738e5bc-791d-4544-b0c2-e2f15727372d.jpg)
