@@ -11,7 +11,12 @@ function App() {
       localList = [];
       localStorage.setItem('groceryList',JSON.stringify(localList))
     } else {
-      localList = JSON.parse(localList)
+      try {
+        localList = JSON.parse(localList)
+      } catch (error) {
+        console.log(error);
+      }
+      
     }
     setGroceryList(localList)
   }, [])

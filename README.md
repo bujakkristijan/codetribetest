@@ -1,8 +1,12 @@
-Grocery list with budget calculations
+### Grocery list with budget calculations
 
+This small project is implemented using ReactJS (Hooks) and Bootstrap libraries. Focus is on solving logical problems from specification.
+Note: Bonus part from specification isn't done yet.
+
+### Specification:
 The objective of this task  is to create a grocery list that accepts an item and also saves it to local storage. There will be two containers, one for submitting an item, and the other will display the list of entries of the submitted items and a button for clearing the items of the list at the bottom.
 
-Notes:
+**Notes:**
 
 The first container has:
 One input for entering the name of the item
@@ -37,3 +41,13 @@ The user should have an option to calculate the grocery budget amount. There sho
 When this button is clicked, the amount of all grocery items should be subtracted from the main budget amount and a message displayed as a popup.
 if the result is greater than 0, display the amount that is left in the main budget.
 If the result is less than 0, display a message indicating the amount that the user needs to add to the budget.
+
+### Application UI preview:
+
+![codetribe1](https://user-images.githubusercontent.com/76042091/236645296-d0a90cb8-7360-417d-b538-d7d457d4108c.jpg)
+
+![codetribe2](https://user-images.githubusercontent.com/76042091/236645297-9ffea5ae-4ee3-404d-a279-c5d8baa4215f.jpg)
+
+![codetribe3](https://user-images.githubusercontent.com/76042091/236645298-edd9fe58-9d9c-49eb-b044-ac1f3a460c55.jpg)
+
+![codetribe5](https://user-images.githubusercontent.com/76042091/236645295-6ffa8323-dab0-4965-aa00-a80f3e90c4b9.jpg)
