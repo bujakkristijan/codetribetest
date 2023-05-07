@@ -13,7 +13,6 @@ One input for entering the name of the item
 One input for entering the quantity of the item  (default is 1)
 ‘Submit’ button. When the user clicks on this button, the item is displayed in the second container and saved to the local storage. 
 
-
 The second container has:
 List of entries containing the items added
 Each entry contains: 
@@ -36,7 +35,6 @@ Each grocery item should have a price displayed, next to the name.
 There should be another(third) input for entering the price amount. The price should be saved with each item, when clicking the ‘Submit’ button.
 
 The user should have an option to calculate the grocery budget amount. There should be a new field/input added at the top of the landing page (above all other inputs) to enter the main shopping budget, and a button next to it, with label "Calculate".
-
 
 When this button is clicked, the amount of all grocery items should be subtracted from the main budget amount and a message displayed as a popup.
 if the result is greater than 0, display the amount that is left in the main budget.
